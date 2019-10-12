@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach() method doesn’t actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.
+
+map() method will also call a provided function on every element in the array. The difference is that map() utilizes return values and actually returns a new Array of the same size.
+
 2. What is the difference between a function and a method?
 
-3. What is closure?
+A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
 
+A method is a piece of code that is called by a name that is associated with an object. In most respects it is identical to a function except for two key differences:
+
+3. What is closure?
+closures are created every time a function is created, at function creation time. ... The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
 4. Describe the four rules of the 'this' keyword.
 
+** If the new keyword is used when calling the function, this inside the function is a brand new object.
+** If apply, call, or bind are used to call a function, this inside the function is the object that is passed in as the argument.
+** If a function is called as a method — that is, if dot notation is used to invoke the function — this is the object that the function is a property of. In other words, when a dot is to the left of a function invocation, this is the object to the left of the dot.
+** If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above, this is the global object. In a browser, it’s window.
 5. Why do we need super() in an extended class?
+
+The super keyword is used to access and call functions on an object's parent. This will be used if they will be a sub class of the parent class.
 
 ## Project Set up
 
